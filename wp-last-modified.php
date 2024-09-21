@@ -20,3 +20,6 @@ $plugin_data = get_plugin_data(__FILE__, false, false);
 define('WPLM_PLUGIN_VERSION', $plugin_data['Version']);
 define('WPLM_DIRECTORY_PATH', plugin_dir_path( __FILE__ ));
 define('WPLM_DIRECTORY_URL', plugin_dir_url( __FILE__ ));
+
+require WPLM_DIRECTORY_PATH . '/inc/class-last-modified.php';
+require WPLM_DIRECTORY_PATH . '/inc/last-touch.php';
