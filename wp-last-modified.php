@@ -5,6 +5,7 @@
 	* Version: 0.1.0
 	* Author: Spadefoot Media, LLC
 	* License: GPL2
+	* Text Domain: wp-last-modified
 
 */
 if( ! defined('ABSPATH') ){
@@ -23,3 +24,4 @@ define('WPLM_DIRECTORY_URL', plugin_dir_url( __FILE__ ));
 
 require WPLM_DIRECTORY_PATH . '/inc/class-last-modified.php';
 require WPLM_DIRECTORY_PATH . '/inc/last-touch.php';
+require WPLM_DIRECTORY_PATH . '/inc/admin-columns.php';

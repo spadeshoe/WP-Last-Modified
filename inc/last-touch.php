@@ -1,4 +1,7 @@
 <?php
+
+use wp_last_modified\inc\LastModified;
+
 add_action('save_post', 'wplm_set_last_modified',10,3);
 
 function wplm_set_last_modified($post_id, $post, $update){

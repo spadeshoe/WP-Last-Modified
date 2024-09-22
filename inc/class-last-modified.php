@@ -1,4 +1,7 @@
 <?php
+
+namespace wp_last_modified\inc;
+
 class LastModified {
 
     private $post_id;
@@ -29,6 +32,27 @@ class LastModified {
         $current_user = $this->get_current_user();
         error_log('Set last modified user ID');
         update_post_meta($this->post_id, 'last_modified_user', $current_user->ID);
+
+    }
+
+    function get_last_modified_user(){
+
+        $last_modified_user_data = get_post_meta($this->post_id, 'last_modified_user', true);
+
+        if($last_modified_user_data == '' || $last_modified_user_data == false){
+            return;
+        }
+
+        $user = new \WP_User($last_modified_user_data);
+
+        // error_log(print_r($user, true));
+        return $user->get('user_login');
+
+    }
+
+    function get_last_modified_date(){
+        //TODO: properly format date
+        return get_the_modified_date('date_format', $this->post_id);
 
     }
 
