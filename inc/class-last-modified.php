@@ -56,6 +56,14 @@ class LastModified {
 
     }
 
+    function get_last_modified_object(){
+
+        return array(
+            'user'  => $this->get_last_modified_user(),
+            'date'  => $this->get_last_modified_date()
+        );
+    }
+
 
 
 

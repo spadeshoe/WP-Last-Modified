@@ -1,0 +1,16 @@
+{
+  "name": "@wp-last-modified/last-modified",
+  "version": "0.1.0",
+  "author": "Spadefoot Media LLC",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "files": [
+    "*"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.2"
+  }
+}

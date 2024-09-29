@@ -23,5 +23,7 @@ define('WPLM_DIRECTORY_PATH', plugin_dir_path( __FILE__ ));
 define('WPLM_DIRECTORY_URL', plugin_dir_url( __FILE__ ));
 
 require WPLM_DIRECTORY_PATH . '/inc/class-last-modified.php';
+require WPLM_DIRECTORY_PATH . '/inc/enqueue-scripts.php';
+
 require WPLM_DIRECTORY_PATH . '/inc/last-touch.php';
 require WPLM_DIRECTORY_PATH . '/inc/admin-columns.php';
